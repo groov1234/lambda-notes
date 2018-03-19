@@ -2,7 +2,15 @@
 
 _An Example Note App_
 
+```
+Legend: 
+- : In Progress 
+x : Complete
+```
+***
+
 ```markdown
+
 ## Trello Set Up: https://trello.com/invite/b/c8dp2Hxn/00c7dc2b3b1c71b90f38ac4b3ab4ef61/lambda-notesbackend-calum-groover
 
 *   [x] Create a Trello account
@@ -23,7 +31,7 @@ _An Example Note App_
 *   [ ] Store Notes in your Database
 *   [ ] Deploy your application to the web
 
-Build an API Endpoint in your Node App for each of the following, and connect them to your React App. These should all be read from your Database and scoped to the logged in user.
+## Build an API Endpoint in your Node App for each of the following, and connect them to your React App. These should all be read from your Database and scoped to the logged in user.
 
 *   [ ] Display a list of notes
 *   [ ] Create a note with a title and content
