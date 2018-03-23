@@ -11,7 +11,10 @@ server.use(express.json());
 server.use(cors());
 server.use(express.static(path.join(__dirname, 'client', 'build')));
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/lambdanotes');
+mongoose.connect(
+    process.env.MONGODB_URI ||
+        'mongodb://<dbuser>:<dbpassword>@ds121999.mlab.com:21999/lambdanotes'
+);
 
 routes(server);
 
