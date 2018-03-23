@@ -79,7 +79,7 @@ class LogIn extends Component {
                                 </h3>
                             ) : null}
                             <br />
-                            <br />
+
                             <Input
                                 type="text"
                                 placeholder="username"
@@ -89,7 +89,7 @@ class LogIn extends Component {
                                 required
                             />
                             <br />
-                            <br />
+
                             <Input
                                 type="password"
                                 placeholder="password"
@@ -100,7 +100,7 @@ class LogIn extends Component {
                             />
                             <br />
                             <br />
-                            <br />
+
                             <Button color="primary" onClick={this.loginAuth}>
                                 Login
                             </Button>
@@ -121,7 +121,7 @@ class LogIn extends Component {
                         <FormGroup>
                             <Label>Sign Up</Label>
                             <br />
-                            <br />
+
                             <Input
                                 type="text"
                                 placeholder="username"
@@ -131,7 +131,7 @@ class LogIn extends Component {
                                 required
                             />
                             <br />
-                            <br />
+
                             <Input
                                 type="password"
                                 placeholder="password"
@@ -141,7 +141,7 @@ class LogIn extends Component {
                                 required
                             />
                             <br />
-                            <br />
+
                             <Input
                                 type="password"
                                 placeholder="confirm password"
@@ -152,7 +152,7 @@ class LogIn extends Component {
                             />
                             <br />
                             <br />
-                            <br />
+
                             <Button color="success" onClick={this.signUpAuth}>
                                 Sign Up
                             </Button>
