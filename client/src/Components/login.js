@@ -71,14 +71,15 @@ class LogIn extends Component {
                         }
                     >
                         <FormGroup>
-                            <Label hidden>Sign In</Label>
+                            <Label>Sign In</Label>
 
                             {this.props.error ? (
                                 <h3 className="LogInError">
                                     Incorrect username/password
                                 </h3>
                             ) : null}
-
+                            <br />
+                            <br />
                             <Input
                                 type="text"
                                 placeholder="username"
@@ -87,7 +88,8 @@ class LogIn extends Component {
                                 name="username"
                                 required
                             />
-
+                            <br />
+                            <br />
                             <Input
                                 type="password"
                                 placeholder="password"
@@ -96,7 +98,9 @@ class LogIn extends Component {
                                 name="password"
                                 required
                             />
-
+                            <br />
+                            <br />
+                            <br />
                             <Button color="primary" onClick={this.loginAuth}>
                                 Login
                             </Button>
@@ -116,6 +120,8 @@ class LogIn extends Component {
                     >
                         <FormGroup>
                             <Label>Sign Up</Label>
+                            <br />
+                            <br />
                             <Input
                                 type="text"
                                 placeholder="username"
@@ -124,7 +130,8 @@ class LogIn extends Component {
                                 name="username"
                                 required
                             />
-
+                            <br />
+                            <br />
                             <Input
                                 type="password"
                                 placeholder="password"
@@ -133,7 +140,8 @@ class LogIn extends Component {
                                 name="password"
                                 required
                             />
-
+                            <br />
+                            <br />
                             <Input
                                 type="password"
                                 placeholder="confirm password"
@@ -142,7 +150,9 @@ class LogIn extends Component {
                                 name="confirmPassword"
                                 required
                             />
-
+                            <br />
+                            <br />
+                            <br />
                             <Button color="success" onClick={this.signUpAuth}>
                                 Sign Up
                             </Button>
