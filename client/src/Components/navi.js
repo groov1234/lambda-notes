@@ -44,23 +44,18 @@ class Navi extends Component {
                         className="mr-2"
                     />
                     <Collapse isOpen={!this.state.collapsed} navbar>
-                        <Nav navbar>
+                        <Nav
+                            className="text-right
+                                    mr-2"
+                            navbar
+                        >
                             <NavItem>
-                                <NavLink
-                                    text-right
-                                    mr-2
-                                    href="https://github.com/groov1234/lambda-notes"
-                                >
+                                <NavLink href="https://github.com/groov1234/lambda-notes">
                                     Github
                                 </NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink
-                                    text-right
-                                    mr-2
-                                    href="/"
-                                    onClick={this.logOut}
-                                >
+                                <NavLink href="/" onClick={this.logOut}>
                                     Sign Out
                                 </NavLink>
                             </NavItem>
