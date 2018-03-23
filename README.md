@@ -25,7 +25,7 @@ https://trello.com/b/Pwhb2pCe/lambda-notesfrontend-calum-groover https://trello.
 
 ## Backend MVP Features:
 
-*   [-] Create a Database for your app
+*   [x] Create a Database for your app
 *   [x] Create a Node app and connect it to your database
 *   [x] Create a Registration Page that allows users to create accounts for your app and sign in with email/password.
 *   [x] Store these User Accounts in your Database
