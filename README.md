@@ -3,15 +3,17 @@
 _An Example Note App_
 
 ```
-Legend: 
-- : In Progress 
+Legend:
+- : In Progress
 x : Complete
 ```
-***
+
+---
 
 ```markdown
+## Trello Set Up:
 
-## Trello Set Up: https://trello.com/invite/b/c8dp2Hxn/00c7dc2b3b1c71b90f38ac4b3ab4ef61/lambda-notesbackend-calum-groover
+https://trello.com/b/Pwhb2pCe/lambda-notesfrontend-calum-groover https://trello.com/invite/b/c8dp2Hxn/00c7dc2b3b1c71b90f38ac4b3ab4ef61/lambda-notesbackend-calum-groover
 
 *   [x] Create a Trello account
 *   [x] Create a new board called "Lambda Notes(Backend) - {Your Name}"
