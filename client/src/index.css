@@ -1,6 +1,13 @@
 body {
-    background-color: slategray;
+    background-color: rgba(112, 128, 144, 0.568);
     margin: auto;
     padding: 0;
     width: 800px;
+}
+
+.navi {
+    padding: 5px;
+    margin-bottom: 100px;
+    border-radius: 10px;
+    background-color: rgba(165, 40, 40, 0.658);
 }

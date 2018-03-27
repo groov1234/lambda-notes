@@ -34,7 +34,7 @@ class Navi extends Component {
     }
     render() {
         return (
-            <div>
+            <div className="navi">
                 <Navbar color="faded" light>
                     <NavbarBrand href="/" className="mr-auto">
                         <h3>Lambda-Notes</h3>
