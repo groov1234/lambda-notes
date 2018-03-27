@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { loggedIn, signUp } from '../Actions';
 import Navi from './navi';
-import 'materialize/dist/cdd/materialize.min.css';
 import {
     Jumbotron,
     Button,
