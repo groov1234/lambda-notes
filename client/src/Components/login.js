@@ -101,9 +101,9 @@ class LogIn extends Component {
                             <br />
                             <br />
 
-                            <Button color="primary" onClick={this.loginAuth}>
+                            <button class="btn waves-effect waves-light" color="green" onClick={this.loginAuth}>
                                 Login
-                            </Button>
+                            </button>
 
                             <Alert color="warning">
                                 Need an account?{' '}
