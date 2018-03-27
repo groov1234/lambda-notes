@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { loggedIn, signUp } from '../Actions';
 import Navi from './navi';
+import 'materialize/dist/css/materialize.min.css';
 import {
     Jumbotron,
     Button,
@@ -105,7 +106,8 @@ class LogIn extends Component {
                                 className="btn waves-effect waves-light"
                                 onClick={this.loginAuth}
                             >
-                                Login
+                                Submit
+                                <i class="material-icons right">send</i>
                             </button>
 
                             <Alert color="warning">
