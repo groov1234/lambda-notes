@@ -5,6 +5,7 @@
     "dependencies": {
         "axios": "^0.17.1",
         "bootstrap": "^4.0.0",
+        "materialize-css": "^1.0.0-beta",
         "react": "^16.2.0",
         "react-bootstrap": "^0.32.1",
         "react-dom": "^16.2.0",
