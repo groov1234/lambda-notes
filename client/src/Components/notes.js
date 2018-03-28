@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { getNotes } from '../Actions';
-import { Input, Form, ListGroupItem, ListGroup, Button } from 'reactstrap';
+import { Input, Form, ListGroupItem, ListGroup, Button, Card, CardBody } from 'reactstrap';
 
 class Notes extends Component {
     constructor(props) {
