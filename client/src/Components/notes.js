@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { getNotes } from '../Actions';
-import { Input, Form, ListGroupItem, ListGroup, Button, Card, CardBody } from 'reactstrap';
+import { Input, Form, ListGroup, Button, Card, CardBody } from 'reactstrap';
 
 class Notes extends Component {
     constructor(props) {
@@ -88,21 +88,21 @@ class Notes extends Component {
                                 onMouseOver={this.hoverToggle}
                                 onMouseOut={this.mouseOut}
                             >
-                                <ListGroupItem className="note--title">
+                                <ListGroup className="note--title">
                                     {note.title.length > 30
                                         ? note.title
                                               .substring(0, 30)
                                               .concat('...')
                                         : note.title}
-                                </ListGroupItem>
+                                </ListGroup>
                                 <br />
-                                <ListGroupItem className="note--text">
+                                <ListGroup className="note--text">
                                     {note.content.length > 70
                                         ? note.content
                                               .substring(0, 70)
                                               .concat('...')
                                         : note.content}
-                                </ListGroupItem>
+                                </ListGroup>
                             </CardBody>
                         );
                     })}

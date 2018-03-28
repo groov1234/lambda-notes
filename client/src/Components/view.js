@@ -121,8 +121,6 @@ class ViewNotes extends Component {
         return (
             <div className="DashBoard">
                 <Jumbotron>
-                    // pull this out into new component with improved view and
-                    add form
                     <Notes previewNote={this.previewNote} />
                     <div className="ViewNote">
                         <Button color="primary" onClick={this.addNoteToggle}>
