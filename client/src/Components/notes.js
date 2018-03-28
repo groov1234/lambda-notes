@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { getNotes } from '../Actions';
-import { Input, Form, CardBody, Card, Button } from 'reactstrap';
+import { Input, Form, ListGroupItem, ListGroup, Button } from 'reactstrap';
 
 class Notes extends Component {
     constructor(props) {
@@ -74,6 +74,7 @@ class Notes extends Component {
                 <Card>
                     {filter.map((note, index) => {
                         return (
+                            
                             <CardBody
                                 key={note._id}
                                 className="note"
@@ -87,21 +88,21 @@ class Notes extends Component {
                                 onMouseOver={this.hoverToggle}
                                 onMouseOut={this.mouseOut}
                             >
-                                <div className="note--title">
+                                <ListGroupItem className="note--title">
                                     {note.title.length > 30
                                         ? note.title
                                               .substring(0, 30)
                                               .concat('...')
                                         : note.title}
-                                </div>
+                                </ListGroupItem>
                                 <br />
-                                <div className="note--text">
+                                <ListGroupItem className="note--text">
                                     {note.content.length > 70
                                         ? note.content
                                               .substring(0, 70)
                                               .concat('...')
                                         : note.content}
-                                </div>
+                                </ListGroupItem>
                             </CardBody>
                         );
                     })}
