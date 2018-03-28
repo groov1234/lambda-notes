@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { getNotes } from '../Actions';
-import { Input, Form, ListGroupItem, ListGroup, Button } from 'reactstrap';
+import { Input, Form, CardBody, Card, Button } from 'reactstrap';
 
 class Notes extends Component {
     constructor(props) {
@@ -71,10 +71,10 @@ class Notes extends Component {
                 </Form>
                 <br />
                 <br />
-                <ListGroup>
+                <Card>
                     {filter.map((note, index) => {
                         return (
-                            <ListGroupItem
+                            <CardBody
                                 key={note._id}
                                 className="note"
                                 onClick={() => {
@@ -102,10 +102,10 @@ class Notes extends Component {
                                               .concat('...')
                                         : note.content}
                                 </div>
-                            </ListGroupItem>
+                            </CardBody>
                         );
                     })}
-                </ListGroup>
+                </Card>
             </div>
         );
     }
