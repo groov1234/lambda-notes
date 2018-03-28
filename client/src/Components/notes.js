@@ -1,7 +1,16 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { getNotes } from '../Actions';
-import { Input, Form, ListGroupItem, ListGroup, Button } from 'reactstrap';
+import {
+    Input,
+    Form,
+    ListGroupItem,
+    ListGroup,
+    Button,
+    Modal,
+    ModalHeader,
+    ModalBody
+} from 'reactstrap';
 
 class Notes extends Component {
     constructor(props) {
@@ -9,8 +18,10 @@ class Notes extends Component {
         this.state = {
             search: '',
             tags: false,
-            addTags: false
+            addTags: false,
+            modal: false
         };
+        this.toggle = this.toggle.bind(this);
     }
 
     componentDidMount() {
@@ -24,6 +35,12 @@ class Notes extends Component {
             [name]: value
         });
     };
+
+    toggle() {
+        this.setState({
+            modal: !this.state.modal
+        });
+    }
 
     hoverToggle = () => {
         const active = this.state.tags;
@@ -61,6 +78,7 @@ class Notes extends Component {
 
                 <br />
                 <br />
+
                 <Form>
                     <Input
                         placeholder="Search..."
@@ -71,41 +89,61 @@ class Notes extends Component {
                 </Form>
                 <br />
                 <br />
-                <ListGroup>
-                    {filter.map((note, index) => {
-                        return (
-                            <ListGroupItem
-                                key={note._id}
-                                className="note"
-                                onClick={() => {
-                                    this.props.previewNote(
-                                        note.title,
-                                        note.content,
-                                        note._id
-                                    );
-                                }}
-                                onMouseOver={this.hoverToggle}
-                                onMouseOut={this.mouseOut}
-                            >
-                                <div className="note--title">
-                                    {note.title.length > 30
-                                        ? note.title
-                                              .substring(0, 30)
-                                              .concat('...')
-                                        : note.title}
-                                </div>
-                                <br />
-                                <div className="note--text">
-                                    {note.content.length > 70
-                                        ? note.content
-                                              .substring(0, 70)
-                                              .concat('...')
-                                        : note.content}
-                                </div>
-                            </ListGroupItem>
-                        );
-                    })}
-                </ListGroup>
+                <Button color="danger" onClick={this.toggle}>
+                    {this.props.buttonLabel}
+                </Button>
+                <Modal
+                    isOpen={this.state.modal}
+                    toggle={this.toggle}
+                    className={this.props.className}
+                >
+                    <ModalHeader toggle={this.toggle} />
+                    <ModalBody>
+                        <ListGroup>
+                            {filter.map((note, index) => {
+                                return (
+                                    <ListGroupItem
+                                        key={note._id}
+                                        className="note"
+                                        onClick={() => {
+                                            this.props.previewNote(
+                                                note.title,
+                                                note.content,
+                                                note._id
+                                            );
+                                        }}
+                                        onMouseOver={this.hoverToggle}
+                                        onMouseOut={this.mouseOut}
+                                    >
+                                        <div className="note--title">
+                                            {note.title.length > 30
+                                                ? note.title
+                                                      .substring(0, 30)
+                                                      .concat('...')
+                                                : note.title}
+                                        </div>
+                                        <br />
+                                        <div className="note--text">
+                                            {note.content.length > 70
+                                                ? note.content
+                                                      .substring(0, 70)
+                                                      .concat('...')
+                                                : note.content}
+                                        </div>
+                                    </ListGroupItem>
+                                );
+                            })}
+                        </ListGroup>
+                    </ModalBody>
+                    <ModalFooter>
+                        <Button color="primary" onClick={this.toggle}>
+                            Do Something
+                        </Button>{' '}
+                        <Button color="secondary" onClick={this.toggle}>
+                            Cancel
+                        </Button>
+                    </ModalFooter>
+                </Modal>
             </div>
         );
     }
