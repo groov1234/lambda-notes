@@ -135,14 +135,6 @@ class Notes extends Component {
                             })}
                         </ListGroup>
                     </ModalBody>
-                    <ModalFooter>
-                        <Button color="primary" onClick={this.toggle}>
-                            Do Something
-                        </Button>{' '}
-                        <Button color="secondary" onClick={this.toggle}>
-                            Cancel
-                        </Button>
-                    </ModalFooter>
                 </Modal>
             </div>
         );
