@@ -9,7 +9,9 @@ import {
     Label,
     Form,
     FormGroup,
-    Modal
+    Modal,
+    ModalBody,
+    ModalHeader
 } from 'reactstrap';
 
 import Notes from './notes';
