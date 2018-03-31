@@ -119,13 +119,10 @@ class ViewNotes extends Component {
                 <Jumbotron>
                     <Notes previewNote={this.previewNote} />
                     <div className="ViewNote">
-                        <Button color="primary" onClick={this.toggle}>
-                            New
-                        </Button>
                         <br />
                         <br />
                         <Button color="danger" onClick={this.toggle}>
-                            New{this.props.buttonLabel}
+                            New/Update{this.props.buttonLabel}
                         </Button>
                         <Modal
                             isOpen={this.state.modal}
