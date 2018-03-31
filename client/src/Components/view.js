@@ -122,49 +122,58 @@ class ViewNotes extends Component {
                         </Button>
                         <br />
                         <br />
-                        <Button color="danger" onClick={this.toggle}>New{this.props.buttonLabel}</Button>
-                        <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
-                            <ModalHeader toggle={this.toggle}>Add/Edit Note</ModalHeader>
+                        <Button color="danger" onClick={this.toggle}>
+                            New{this.props.buttonLabel}
+                        </Button>
+                        <Modal
+                            isOpen={this.state.modal}
+                            toggle={this.toggle}
+                            className={this.props.className}
+                        >
+                            <ModalHeader toggle={this.toggle}>
+                                Add/Edit Note
+                            </ModalHeader>
                             <ModalBody>
-                            <Form>
-                                <FormGroup onSubmit={this.updateNote}>
-                                    <Label>Title: </Label>
-                                    <Input
-                                        name="title"
-                                        onChange={this.noteChangeHandler}
-                                        value={this.state.title}
-                                        type="text"
-                                        placeholder="Title"
-                                        required
-                                    />
+                                <Form>
+                                    <FormGroup onSubmit={this.updateNote}>
+                                        <Label>Title: </Label>
+                                        <Input
+                                            name="title"
+                                            onChange={this.noteChangeHandler}
+                                            value={this.state.title}
+                                            type="text"
+                                            placeholder="Title"
+                                            required
+                                        />
 
-                                    <Label>Body: </Label>
-                                    <Input
-                                        className="ViewNote--text"
-                                        name="content"
-                                        onChange={this.noteChangeHandler}
-                                        value={this.state.content}
-                                        type="textarea"
-                                        rows="10"
-                                        placeholder="Add Notes"
-                                        required
-                                    />
-                                </FormGroup>
-                            </Form>
-                            <div className="ViewNote--update">
-                                <Button
-                                    color="success"
-                                    onClick={this.updateNote}
-                                >
-                                    Save
-                                </Button>
-                                <Button
-                                    color="danger"
-                                    onClick={this.deleteNote}
-                                >
-                                    Delete
-                                </Button>
-                            </div>
+                                        <Label>Body: </Label>
+                                        <Input
+                                            className="ViewNote--text"
+                                            name="content"
+                                            onChange={this.noteChangeHandler}
+                                            value={this.state.content}
+                                            type="textarea"
+                                            rows="10"
+                                            placeholder="Add Notes"
+                                            required
+                                        />
+                                    </FormGroup>
+                                </Form>
+                                <div className="ViewNote--update">
+                                    <Button
+                                        color="success"
+                                        onClick={this.updateNote}
+                                    >
+                                        Save
+                                    </Button>
+                                    <Button
+                                        color="danger"
+                                        onClick={this.deleteNote}
+                                    >
+                                        Delete
+                                    </Button>
+                                </div>
+                            </ModalBody>
                         </Modal>
                     </div>
                 </Jumbotron>
