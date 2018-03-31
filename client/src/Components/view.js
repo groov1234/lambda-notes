@@ -2,7 +2,15 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { addNote, updateNote, deleteNote } from '../Actions';
-import { Jumbotron, Button, Input, Label, Form, FormGroup } from 'reactstrap';
+import {
+    Jumbotron,
+    Button,
+    Input,
+    Label,
+    Form,
+    FormGroup,
+    Modal
+} from 'reactstrap';
 
 import Notes from './notes';
 
@@ -12,8 +20,16 @@ class ViewNotes extends Component {
         this.state = {
             title: '',
             content: '',
-            id: -1
+            id: -1,
+            modal: false
         };
+        this.toggle = this.toggle.bind(this);
+    }
+
+    toggle() {
+        this.setState({
+            modal: !this.state.modal
+        });
     }
 
     componentDidMount() {
